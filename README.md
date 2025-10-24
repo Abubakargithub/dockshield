@@ -13,11 +13,11 @@ DockShield is a Go-based open-source daemon that monitors, secures, and optimize
 ## 🚀 Installation
 ### Go
 ```
-go install github.com/yourorg/dockshield@latest
+go install github.com/Abubakargithub/dockshield@latest
 ```
 ### Binary
 ```
-curl -L https://github.com/yourorg/dockshield/releases/latest/download/dockshield-linux-amd64.tar.gz | tar xz
+curl -L https://github.com/Abubakargithub/dockshield/releases/latest/download/dockshield-linux-amd64.tar.gz | tar xz
 sudo mv dockshield /usr/local/bin/
 ```
 ### Docker
