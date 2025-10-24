@@ -1,0 +1,10 @@
+[Unit]
+Description=DockShield Guardian
+After=network.target docker.service
+
+[Service]
+ExecStart=/usr/local/bin/dockshield start
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
