@@ -2,7 +2,7 @@ project_name: dockshield
 builds:
   - env: [CGO_ENABLED=0]
     main: ./cmd/dockshield
-    goos: [linux, darwin, windows]
+    goos: [linux, windows, darwin]
     goarch: [amd64, arm64]
 archives:
   - format: tar.gz
@@ -11,5 +11,5 @@ checksum:
   name_template: 'checksums.txt'
 release:
   github:
-    owner: yourorg
+    owner: abubakargithub
     name: dockshield
