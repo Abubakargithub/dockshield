@@ -1,9 +1,7 @@
 package main
 
 import (
-	"fmt"
 	"github.com/spf13/cobra"
-	"github.com/spf13/viper"
 	"go.uber.org/zap"
 
 	"github.com/abubakargithub/dockshield/internal/config"
@@ -50,4 +48,12 @@ func main() {
 	if err := rootCmd.Execute(); err != nil {
 		zap.L().Fatal("command failed", zap.Error(err))
 	}
+	rootCmd.AddCommand(&cobra.Command{
+	Use:   "monitor",
+	Short: "Continuously monitor Docker health",
+	Run: func(cmd *cobra.Command, args []string) {
+		monitor.StartContinuousMonitor()
+	},
+})
+
 }
